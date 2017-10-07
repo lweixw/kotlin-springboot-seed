@@ -10,9 +10,11 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.http.HttpStatus
 import org.springframework.test.context.junit4.SpringRunner
+import org.springframework.web.servlet.config.annotation.EnableWebMvc
 
 @RunWith(SpringRunner::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@EnableWebMvc
 class HelloControllerEndointIntegrationTest {
 	@Autowired
 	lateinit var testRestTemplate: TestRestTemplate
